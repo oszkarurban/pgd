@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: run.py",
+            "type": "python",
+            "request": "launch",
+            "program": "run.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--instruction_path", "agent/prompts/jsons/p_som_cot_id_actree_3s.json",
+                "--test_start_idx", "74",
+                "--test_end_idx", "75",
+                "--result_dir", "pgd_results",
+                "--test_config_base_dir", "config_files/vwa/test_classifieds",
+                "--model", "gpt-4-vision-preview",
+                "--action_set_tag", "som",
+                "--observation_type", "image_som",
+                "--pgd_image_alt", "1987 Porsche 911 Carrera Coupe","2011 Honda Accord Special Edition Sedan","2012 Ford Focus Se Hatchback", "2014 Freightliner Cascadia 125 6x4 TA Sleeper", "LOW MILES 2015 Nissan Altima SV 38 MPG REMOTE START"
+            ]
+        }
+    ]
+}
