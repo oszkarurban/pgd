@@ -1,0 +1,24 @@
+# Default PGD attack hyperparameters.
+# Override on the CLI with --<flag> or by passing --config <other-yaml>.
+
+attack:
+  k: 22000              # number of optimisation steps
+  eps: 0.2              # L_inf radius around the original image
+  eps_step: 0.2         # step size used by the SGD optimiser only
+  clip_min: 0.0
+  clip_max: 1.0
+  optimizer: adam       # one of: adam | sgd
+  loss: cross_entropy   # one of: cross_entropy | mask | margin | iterative
+
+optimizer:
+  adam_lr: 0.0095
+  sgd_lr: 0.25
+
+logging:
+  log_every: 20         # save image grid + loss curve every N steps
+  max_success_per_sample: 50
+
+model:
+  target_model: Salesforce/blip2-flan-t5-xl
+  device: cuda
+  dtype: float16

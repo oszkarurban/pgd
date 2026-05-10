@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pgd-attack"
+version = "0.2.0"
+description = "Projected Gradient Descent attacks against vision-language models for VisualWebArena"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Oszkar Urban" }]
+
+dependencies = [
+    "torch>=2.1",
+    "torchvision>=0.16",
+    "transformers>=4.40",
+    "accelerate>=0.30",
+    "pillow>=10.0",
+    "numpy>=1.26",
+    "tqdm>=4.66",
+    "matplotlib>=3.8",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+pgd-attack = "pgd_attack.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
